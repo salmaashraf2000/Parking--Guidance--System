@@ -31,8 +31,8 @@ public class ParkingProject {
 	
     public static void main(String[] args) {
         // TODO code application logic here
-
-      System.out.println("welcome to our project\n");
+       new BackgroundImageJFrame();
+     /* System.out.println("welcome to our project\n");
         Admin a1 = new Admin();
         Admin a2 = new Admin();
         Operator op=new Operator();
@@ -75,7 +75,7 @@ public class ParkingProject {
         //a1.AddOperator(8, "ahmed", "ahmed200@gmail.com", "ahmoo", "0100152556");
        // a1.AddOperator(9, "mohammed", "ahmed200@gmail.com", "ahmoo", "0100152556");
         //a1.Logout();
-        new BackgroundImageJFrame();
+       
         //new FrameOperator();
         
        // a1.viewOperators();
@@ -91,7 +91,7 @@ public class ParkingProject {
          a2.UpdateOperator(2);
          a2.viewOperators();
         // Ticket t=new Ticket();*/
-         Customer c1=new Customer();
+         //Customer c1=new Customer();
         // c1.pay(2);
          //c1.pay(3);
          //c1.printTicket("salma","abc123");

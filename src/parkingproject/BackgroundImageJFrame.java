@@ -84,7 +84,7 @@ public class BackgroundImageJFrame extends JFrame implements ActionListener{
         String id=t1.getText();
         String pass=p1.getText();
         String combovalue = (String)c1.getSelectedItem();
-        boolean incorrect = true;
+       /* boolean incorrect = true;
           while(incorrect){
            try{
                Integer.parseInt(id);
@@ -94,8 +94,19 @@ public class BackgroundImageJFrame extends JFrame implements ActionListener{
           id=JOptionPane.showInputDialog("Invalid input.please enter a number without spaces");
           }
 
-        }          
+        }        */  
         if(e.getSource().equals(b1)){
+            boolean incorrect = true;
+          while(incorrect){
+           try{
+               Integer.parseInt(id);
+               incorrect = false;
+           }
+              catch(NumberFormatException formate){
+          id=JOptionPane.showInputDialog("Invalid input.please enter a number without spaces");
+          }
+
+        }   
            if(combovalue=="Admin" && !id.isEmpty() && !pass.isEmpty() && !(id.trim().isEmpty()) && !(pass.trim().isEmpty())){
            
               ad=new Admin();  

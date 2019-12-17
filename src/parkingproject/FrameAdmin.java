@@ -483,7 +483,7 @@ pupdate.setVisible(false);                  //////////////////////mo5talefaaaaaa
                 VSR.setVisible(false);
                 VSlot.setVisible(false);
                  pupdate.setVisible(false);  //////////////////////////mo5talefaaaa makanetsh mawgodaaaa
-                 
+                 paddop.add(P);
                 frame.add(paddop);
                 paddop.setVisible(true);
                   }
@@ -703,8 +703,7 @@ pupdate.setVisible(false);                  //////////////////////mo5talefaaaaaa
                        pass=JOptionPane.showInputDialog("Invalid Password: password length must have at least 6 character,1 digit,1 upper case character,and @,$,#,&,%,^");
                       checkpass=validpassword(pass);
                      }
-               
-               
+                  
                     Boolean checkemail=validemail(emaill);
                       while(!checkemail){
                          emaill=JOptionPane.showInputDialog("Invalid input:Please enter valid email");
@@ -771,7 +770,7 @@ pupdate.setVisible(false);                  //////////////////////mo5talefaaaaaa
                    
                     checkphone=validPhone(Phonee);
                      while(!checkphone){                      
-                          Phonee=JOptionPane.showInputDialog("Invalid input.please enter phone number of 7 digits");
+                          Phonee=JOptionPane.showInputDialog("Invalid input.please enter phone number of 11 digits");
                           checkphone=validPhone(Phonee);
                       } 
                      
@@ -780,7 +779,7 @@ pupdate.setVisible(false);                  //////////////////////mo5talefaaaaaa
                     }else if (admin.AddOperator(Integer.valueOf(Iid), Namee, Emaill, Pass, Phonee)==1){
                                     JOptionPane.showMessageDialog(baddop, "Successful" ,"Add Operator",JOptionPane.PLAIN_MESSAGE );
                     }else{
-                                     JOptionPane.showMessageDialog(baddop, "Error" ,"Add Operator",JOptionPane.ERROR_MESSAGE);
+                                     JOptionPane.showMessageDialog(baddop, "Error Id already exist" ,"Add Operator",JOptionPane.ERROR_MESSAGE);
 
                     }
                    tidd.setText("");
@@ -825,22 +824,13 @@ pupdate.setVisible(false);                  //////////////////////mo5talefaaaaaa
              AddSlot.addActionListener(new ActionListener(){ // button add slots
                 @Override
                 public void actionPerformed(ActionEvent ae) {
-                   String iD  = tid_s.getText().trim();
-                    boolean incorrect = true;
-                    while(incorrect){
-                       try{
-                         Integer.parseInt(iD);
-                        incorrect = false;
-                       }
-                       catch(NumberFormatException formate){
-                       iD=JOptionPane.showInputDialog("Invalid input.please enter a number without spaces");
-                       }
-
-                       } 
-                    if(iD.isEmpty() || (iD.trim().isEmpty()) ) {
+                   String D  = tid_s.getText().trim();
+                    
+                    
+                    if(D.isEmpty() || (D.trim().isEmpty()) ) {
                         JOptionPane.showMessageDialog(AddSlot, "Please Enter the Description","Add Slot",JOptionPane.PLAIN_MESSAGE);
                     }else {
-                        admin.AddSpot(iD);
+                        admin.AddSpot(D);
                         JOptionPane.showMessageDialog(AddSlot, "Successful" ,"Add Slot",JOptionPane.PLAIN_MESSAGE );
                     }
                     tid_s.setText("");
@@ -881,7 +871,10 @@ pupdate.setVisible(false);                  //////////////////////mo5talefaaaaaa
                         JOptionPane.showMessageDialog(up, "Successful" ,"Update Operator",JOptionPane.PLAIN_MESSAGE );
                     }
 
-                    }
+                    }else{
+                     JOptionPane.showMessageDialog(up, "ID does not exist","Update Operator",JOptionPane.PLAIN_MESSAGE);
+
+                   }
             }
                 tid1.setText("");
                 tch.setText("");

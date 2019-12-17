@@ -110,7 +110,7 @@ public class FrameOperator /*extends JFrame*/ implements ActionListener{
         
       label = new JLabel("To Log out Click Here"); 
       tabbedPane.addTab("Calculate Money", panel4);
-      tabbedPane.addTab("View All Slots", panel1);
+      tabbedPane.addTab("View All Spots", panel1);
       tabbedPane.addTab("View Free Spots ", panel2);
       tabbedPane.addTab("Search For Ticket", panel5);
       tabbedPane.addTab("Log out", panel3);
@@ -127,7 +127,7 @@ public class FrameOperator /*extends JFrame*/ implements ActionListener{
       calcmoney.addActionListener(new ActionListener(){ // button Calculate Money
                 @Override
                 public void actionPerformed(ActionEvent ae) {
-                   String iD  = tid.getText();
+                   String iD  = tid.getText().trim();
                     boolean incorrect = true;
                     while(incorrect){
                       try{
@@ -154,7 +154,7 @@ public class FrameOperator /*extends JFrame*/ implements ActionListener{
       check.addActionListener(new ActionListener(){ // button Calculate Money
                 @Override
                 public void actionPerformed(ActionEvent ae) {
-                   String iDc  = tidcheck.getText();
+                   String iDc  = tidcheck.getText().trim();
                     boolean incorrect = true;
                     while(incorrect){
                       try{
@@ -198,7 +198,7 @@ public class FrameOperator /*extends JFrame*/ implements ActionListener{
                      }
                         
                     }else{
-                      JOptionPane.showMessageDialog(check, "Error","Search For Ticket",JOptionPane.ERROR_MESSAGE);
+                      JOptionPane.showMessageDialog(check, "Error Id does not exist","Search For Ticket",JOptionPane.ERROR_MESSAGE);
                     }
                     tidcheck.setText("");
       }}
