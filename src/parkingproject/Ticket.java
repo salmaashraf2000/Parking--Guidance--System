@@ -14,61 +14,62 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 public class Ticket {
+    
     private int id;
     private String arrivalTime;
     private String departureTime;
     private String date;
-   // static int newid=100;
     private int idSpot;
     private String Operatorname;
     
     Ticket(){
         this.arrivalTime="0";
         this.departureTime="0";
-       // this.id=newid;
-       this.id=1;
-        //newid++;
+        this.id=1;
+      
     }
-    public void setOperatorname(String n){///
+    public void setOperatorname(String n){
         this.Operatorname=n;
     }
-    
-    
     
     public String getOperatorname(){
         return this.Operatorname;
     }
     
-     public void setidSlot(int n){ ////
+     public void setidSlot(int n){ 
         this.idSpot=n;
     }
     
-     public int getidSlot(){///
+     public int getidSlot(){
         return this.idSpot;
     }
      
-    public void setarrivaltime(String s){///
+    public void setarrivaltime(String s){
         this.arrivalTime=s;
     }
     
-    public void setdeparturetime(String s){//
+    public void setdeparturetime(String s){
         this.departureTime=s;
     }
    
-    public void setDate(){   ///
+    public void setDate(){   
 	Date date = new Date();
         SimpleDateFormat d=new SimpleDateFormat("yyyy/MM/dd",Locale.US);
         this.date=d.format(date);
     }
-     public String getdate(){///
+    
+     public String getdate(){
         return this.date;
     }
-     public String getarrivalTime(){///
+     
+     public String getarrivalTime(){
         return this.arrivalTime;
     }
-     public String getdepartureTime(){////
+     
+     public String getdepartureTime(){
          return this.departureTime;
      }
+     
      public int getid(){
          return this.id;
      }

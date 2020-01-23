@@ -23,7 +23,7 @@ public class FrameInfoTicket extends JFrame{
         setVisible(true);
         setLayout(null); 
         setTitle("Ticket");
-        JLabel background = new JLabel(new ImageIcon("E:\\pp.png"));
+        JLabel background = new JLabel(new ImageIcon("C:\\Users\\metr\\Documents\\NetBeansProjects\\ParkingProject\\pp.png"));
         add(background); 
         background.setLayout(null);
         background.setSize(578,313);
@@ -44,52 +44,52 @@ public class FrameInfoTicket extends JFrame{
         background.add(l4);
         background.add(l5);
         background.add(l6);
-         background.add(l7);
+        background.add(l7);
         background.add(l8);
         background.add(l9);
         background.add(l10);
        
         l1.setFont(new Font("Verdana", Font.BOLD, 15)); 
-       l1.setSize(420, 20); 
+        l1.setSize(420, 20); 
         l1.setLocation(150, 10); 
         
-         l2.setFont(new Font("Verdana",  Font.BOLD, 15)); 
-       l2.setSize(420, 20); 
+        l2.setFont(new Font("Verdana",  Font.BOLD, 15)); 
+        l2.setSize(420, 20); 
         l2.setLocation(150, 30); 
         
-         l3.setFont(new Font("Verdana", Font.BOLD, 15)); 
-       l3.setSize(420, 20); 
+        l3.setFont(new Font("Verdana", Font.BOLD, 15)); 
+        l3.setSize(420, 20); 
         l3.setLocation(150, 50); 
         
-         l4.setFont(new Font("Verdana",  Font.BOLD, 15)); 
-       l4.setSize(420, 20); 
+        l4.setFont(new Font("Verdana",  Font.BOLD, 15)); 
+        l4.setSize(420, 20); 
         l4.setLocation(150, 70); 
         
-         l5.setFont(new Font("Verdana", Font.BOLD, 15)); 
-       l5.setSize(420, 20); 
+        l5.setFont(new Font("Verdana", Font.BOLD, 15)); 
+        l5.setSize(420, 20); 
         l5.setLocation(150, 90); 
         
-         l6.setFont(new Font("Verdana",Font.BOLD, 15)); 
-       l6.setSize(420, 20); 
+        l6.setFont(new Font("Verdana",Font.BOLD, 15)); 
+        l6.setSize(420, 20); 
         l6.setLocation(150, 110);
         
-         l7.setFont(new Font("Verdana", Font.BOLD, 15)); 
-       l7.setSize(420, 20); 
+        l7.setFont(new Font("Verdana", Font.BOLD, 15)); 
+        l7.setSize(420, 20); 
         l7.setLocation(150, 130); 
         
-         l8.setFont(new Font("Verdana",  Font.BOLD, 15)); 
-       l8.setSize(420, 20); 
+        l8.setFont(new Font("Verdana",  Font.BOLD, 15)); 
+        l8.setSize(420, 20); 
         l8.setLocation(150, 150); 
         
-         l9.setFont(new Font("Verdana", Font.BOLD, 15)); 
-       l9.setSize(420, 20); 
+        l9.setFont(new Font("Verdana", Font.BOLD, 15)); 
+        l9.setSize(420, 20); 
         l9.setLocation(150, 170); 
         
-         l10.setFont(new Font("Verdana",Font.BOLD, 15)); 
-       l10.setSize(420, 20); 
+        l10.setFont(new Font("Verdana",Font.BOLD, 15)); 
+        l10.setSize(420, 20); 
         l10.setLocation(150, 190);
         
-     setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
 }

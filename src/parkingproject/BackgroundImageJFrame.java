@@ -7,7 +7,7 @@ package parkingproject;
 
 /**
  *
- * @author metr
+ * @author 
  */
 import javax.swing.*;
 import java.awt.*;
@@ -24,13 +24,14 @@ public class BackgroundImageJFrame extends JFrame implements ActionListener{
     Admin ad;
     Operator op;
     public BackgroundImageJFrame(){
+        
         String[] role = {"Admin","Operator"};
         setTitle("Login");
-        setSize(800,560);                 //set size of frame w l
+        setSize(800,560);                 
         setResizable(false);
         setVisible(true);
         setLayout(null);
-        JLabel background = new JLabel(new ImageIcon("C:\\Users\\metr\\Pictures\\Saved Pictures\\06_parking_total_autonomia.jpg"));
+        JLabel background = new JLabel(new ImageIcon("C:\\Users\\metr\\Documents\\NetBeansProjects\\ParkingProject\\06_parking_total_autonomia.jpg"));
         add(background); 
         background.setLayout(null);
         background.setSize(800,560);
@@ -78,67 +79,77 @@ public class BackgroundImageJFrame extends JFrame implements ActionListener{
         b2.setBounds(345,380,100,23);
          b2.addActionListener(this);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
     }
+    
+    
     @Override
     public void actionPerformed(ActionEvent e){
+        
+        
         String id=t1.getText();
         String pass=p1.getText();
         String combovalue = (String)c1.getSelectedItem();
-       /* boolean incorrect = true;
-          while(incorrect){
-           try{
-               Integer.parseInt(id);
-               incorrect = false;
-           }
-              catch(NumberFormatException formate){
-          id=JOptionPane.showInputDialog("Invalid input.please enter a number without spaces");
-          }
-
-        }        */  
-        if(e.getSource().equals(b1)){
+        
+        if(e.getSource().equals(b1))
+        {
             boolean incorrect = true;
-          while(incorrect){
-           try{
-               Integer.parseInt(id);
-               incorrect = false;
-           }
-              catch(NumberFormatException formate){
-          id=JOptionPane.showInputDialog("Invalid input.please enter a number without spaces");
-          }
-
-        }   
-           if(combovalue=="Admin" && !id.isEmpty() && !pass.isEmpty() && !(id.trim().isEmpty()) && !(pass.trim().isEmpty())){
-           
-              ad=new Admin();  
-              if((ad.login(Integer.valueOf(id),pass))==1){
-                  JOptionPane.showMessageDialog(this,"Logged in successfully");
-                  //frame of admin
-                  setVisible(false);
-                  new FrameAdmin();
+            while(incorrect)
+            {
+                try{
+                  Integer.parseInt(id);
+                  incorrect = false;
+                }
+                 catch(NumberFormatException formate)
+                {
+                  id=JOptionPane.showInputDialog("Invalid input.please enter a number without spaces");
+                }
+            }  
+            
+            if(combovalue=="Admin" && !id.isEmpty() && !pass.isEmpty() && !(id.trim().isEmpty()) && !(pass.trim().isEmpty()))
+            {
+                 ad=new Admin();  
+            
+                 if((ad.login(Integer.valueOf(id),pass))==1)
+                 {   
+                     //frame od admin
+                     JOptionPane.showMessageDialog(this,"Logged in successfully");
+                     setVisible(false);
+                     new FrameAdmin();
                   
-              }else{
-                  JOptionPane.showMessageDialog(this,"Wrong Id or Password");
-              }
+                  }else
+                  {
+                     JOptionPane.showMessageDialog(this,"Wrong Id or Password");
+                  }
            
  
-           }else if(combovalue=="Operator" && !id.isEmpty() && !pass.isEmpty() && !(id.trim().isEmpty()) && !(pass.trim().isEmpty())){
-             op=new Operator();  
-              if((op.login(Integer.valueOf(id),pass))==1){
+            }else if(combovalue=="Operator" && !id.isEmpty() && !pass.isEmpty() && !(id.trim().isEmpty()) && !(pass.trim().isEmpty()))
+            {
+            
+                op=new Operator();  
+                
+                if((op.login(Integer.valueOf(id),pass))==1)
+                {
+                   //frame of operator 
                   JOptionPane.showMessageDialog(this,"Logged in successfully");
-                  //frame of operator
                   setVisible(false);
                   new FrameOperator();
-              }else{
+                  
+                }else
+                {
                   JOptionPane.showMessageDialog(this,"Wrong Id or Password");
-              }
+                }
         
-           }else{
+            }else
+            {
                 JOptionPane.showMessageDialog(this,"Please enter all in formation");
-           }
-        }else if(e.getSource().equals(b2)){
+            }
+            
+        }else if(e.getSource().equals(b2))
+        {
            //frame of customer
             setVisible(false);
-           new FrameCustomer();
+            new FrameCustomer();
         }
     }
 }

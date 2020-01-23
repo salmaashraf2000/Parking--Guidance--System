@@ -20,12 +20,14 @@ public class FrameTicket extends JFrame{
     JLabel l1,l2,l3,l4,l5,l6;
     
     FrameTicket(int ticketid,String arrive,String date,String opname,int idspot,String sdescription){
+        
         setSize(580,350);                 
         setResizable(false);
         setVisible(true);
         setLayout(null); 
         setTitle("Ticket");
-        JLabel background = new JLabel(new ImageIcon("E:\\pp.png"));
+        JLabel background = new JLabel(new ImageIcon("C:\\Users\\metr\\Documents\\NetBeansProjects\\ParkingProject\\pp.png"));
+        
         add(background); 
         background.setLayout(null);
         background.setSize(578,313);
@@ -44,27 +46,27 @@ public class FrameTicket extends JFrame{
         background.add(l6);
        
         l1.setFont(new Font("Verdana", Font.BOLD, 18)); 
-       l1.setSize(420, 20); 
+        l1.setSize(420, 20); 
         l1.setLocation(150, 10); 
         
-         l2.setFont(new Font("Verdana",  Font.BOLD, 18)); 
-       l2.setSize(420, 20); 
+        l2.setFont(new Font("Verdana",  Font.BOLD, 18)); 
+        l2.setSize(420, 20); 
         l2.setLocation(150, 50); 
         
-         l3.setFont(new Font("Verdana", Font.BOLD, 18)); 
-       l3.setSize(420, 20); 
+        l3.setFont(new Font("Verdana", Font.BOLD, 18)); 
+        l3.setSize(420, 20); 
         l3.setLocation(150, 90); 
         
-         l4.setFont(new Font("Verdana",  Font.BOLD, 18)); 
-       l4.setSize(420, 20); 
+        l4.setFont(new Font("Verdana",  Font.BOLD, 18)); 
+        l4.setSize(420, 20); 
         l4.setLocation(150, 130); 
         
-         l5.setFont(new Font("Verdana", Font.BOLD, 18)); 
-       l5.setSize(420, 20); 
+        l5.setFont(new Font("Verdana", Font.BOLD, 18)); 
+        l5.setSize(420, 20); 
         l5.setLocation(150, 170); 
         
-         l6.setFont(new Font("Verdana",Font.BOLD, 18)); 
-       l6.setSize(420, 20); 
+        l6.setFont(new Font("Verdana",Font.BOLD, 18)); 
+        l6.setSize(420, 20); 
         l6.setLocation(150, 210);
         
          setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
